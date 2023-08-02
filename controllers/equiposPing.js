@@ -5,7 +5,7 @@ const ping = require('ping');
 
 
 const EquiposPing = require('../models/equipos_ping');
-const Equipo = require('../models/Equipos');
+const Equipo = require('../models/equipos');
 
 
 const obtenerEquiposPing = async(req, res = response ) => {
