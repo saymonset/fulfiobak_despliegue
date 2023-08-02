@@ -1,36 +1,33 @@
 const { Schema, model } = require('mongoose');
 
-const ResponseIncidenciaSchema = Schema({
+const EquiposPingSchema = Schema({
     createdAt: { 
         type: Date, 
         default: Date.now 
     },
-    mensaje: {
-        type: String,
-        required: true
+    respuesta: {
+        type: Boolean,
+        required: true,
+        default: false,
     },
-    archivo: {
-        type: String
-    },
-    
     usuario: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario',
         required: true
     },
     
-    incidencia: {
+    equipo: {
         type: Schema.Types.ObjectId,
-        ref: 'Incidencia',
+        ref: 'Equipo',
         required: true
     }, 
 });
 
 
-ResponseIncidenciaSchema.methods.toJSON = function() {
+EquiposPingSchema.methods.toJSON = function() {
     const { __v,  ...data  } = this.toObject();
     return data;
 }
 
 
-module.exports = model( 'ResponseIncidencia', ResponseIncidenciaSchema );
+module.exports = model( 'EquiposPing', EquiposPingSchema );

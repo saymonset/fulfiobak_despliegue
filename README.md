@@ -1,6 +1,6 @@
 # BACKEND
 
-1.Intalar node v19.2.0 y Ejecutar ```npm install``` para reconstruir los módulos de Node.
+1. Ejecutar ```npm install``` para reconstruir los módulos de Node.
 
 2. Ejecutar 
 ```

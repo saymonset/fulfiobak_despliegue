@@ -9,16 +9,14 @@ class Server {
   constructor() {
     this.app = express();
     this.port = process.env.PORT;
-    
-    
 
     this.paths = {
       authcreateuser: '/api/authcreateuser',
       auth: '/api/auth',
       usuarios: '/api/usuarios',
       roles: '/api/roles',
-      incidencias: '/api/incidencias',
-      resincidencias: '/api/resincidencias',
+      equipos: '/api/equipos',
+      equiposPing: '/api/equiposPing',
       usuariosroles: '/api/usuariosroles'
     }
 
@@ -56,8 +54,8 @@ class Server {
     this.app.use(this.paths.authcreateuser, require('../routes/authcreateuser'));
     this.app.use(this.paths.auth, require('../routes/auth'));
     this.app.use(this.paths.roles, require('../routes/roles'));
-    this.app.use(this.paths.incidencias, require('../routes/incidencias'));
-    this.app.use(this.paths.resincidencias, require('../routes/resincidencias'));
+    this.app.use(this.paths.equipos, require('../routes/equipos'));
+    this.app.use(this.paths.equiposPing, require('../routes/equiposPing'));
     this.app.use(this.paths.usuariosroles, require('../routes/usuariosroles'));
 
 
