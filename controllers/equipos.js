@@ -1,5 +1,5 @@
 const { response, request } = require('express');
-const Equipo = require('../models/Equipos');
+const Equipo = require('../models/equipos');
 
 
 
